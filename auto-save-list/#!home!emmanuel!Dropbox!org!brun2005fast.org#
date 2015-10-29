@@ -1,0 +1,102 @@
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS:
+#+LATEX_HEADER:
+#+LATEX_HEADER_EXTRA:
+#+DESCRIPTION:
+#+KEYWORDS:
+#+SUBTITLE: Paper Notes and Coding Guidelines
+#+DATE: \today
+#+TITLE: Fast Manifold Learning Based on Riemannian Normal Coordinates
+
+* Recap
+  In our last official meeting, we agreed that I would attempt to
+  write some code from a publication implementing a manifold learning
+  algorithm. As the title suggests, I have taken some notes on this
+  particular paper because I think Riemannian Normal Coordinates are
+  an interesting idea. The pdf should be attached and also be hosted
+  on the shared dropbox folder if you would prefer using that service.
+  
+* Recap (October 06 2015)
+  I have updated this document with the tasks I have completed. Steps 1-3 are fully complete.
+  Those were the most time consuming.
+* Brief rundown
+  They are using Riemannian normal coordinates (and some of its
+  attendant consequences) to perform manifold learning. Essentially,
+  normal coordinates provide a traversal mechanism along geodesics on
+  a manifold.
+* Methodology (mostly verbatim from the paper with additional notes for coding)
+**  Step 1
+   From a set of data points, $X$, sampled from a manifold $M$, choose
+   a base point $p\in X$.
+   (Complete...effectively.)
+***  Coding notes
+    Will need to consider how to take in data (from a .mat file, .csv
+    file?) and write the necessary I/O functions.
+**  Step 2
+   To determine the dimension of $M$, select a ball $B(p)$ of the $K$
+   closest points around $p$. Then perform standard PCA in the ambient
+   space for $B(p)$. This will give us $T_p M$, with $\text{dim}T_p M
+   = N$, where we choose any suitable ON-basis
+   $\{\hat{e}_i\}$. All $y\in B(p)$ are mapped to $T_p M$ by
+   projection on  $\{\hat{e}_i\}$ in the ambient space. This
+   is the $\Psi$-mapping in figure 2.
+   (Complete)
+*** Coding notes
+    Selecting random points and then performing standard PCA
+    should be easy enough. Only need to define projection for later steps.
+** Step 3
+   Approximate distances along $M$. In the current implementation we do
+   this by defining a weighted undirected graph, with each node
+   corresponding to a data point and with edges connecting each node
+   to its $L$ closest neighbors. Let the weights of these edges be
+   defined by the Euclidean distance between data points in the
+   ambient space. We then use Dijkstra's algorithm for finding
+   shortest paths in this graph, to approximate the geodesic distances
+   in $M$. This gives estimates of $d(x,y)$ for all $(x,y)\in X\times B(p)$.
+   (Complete)
+*** Coding notes
+    Finding the closest $L$ neighbors with Dijstrka's algorithm can be
+    easy or hard as you want this to be (remember Data.Graph)
+** Step 4
+   To calculate the direction from $p$ to every point $x\in X$,
+   estimate $\textbf{g}=\sum g^{i}\hat{e}_i=\nabla_y
+   d^2(x,y)\vert_{y=p}$ numerically, using the values obtained in the
+   previous step. While we only have values of $d^2(x,y)$ for $y\in
+   B(p)$,
+   we must interpolate this function in $T_p M$, e.g. using a
+   second order polynomial, in order to calculate the partial
+   derivatives at $\Psi(p)$. (Working on this part. Will ask for
+   help!)
+*** Coding Notes
+    You will need to interpolate the squared distance function with a
+    second order polynomial (or some other scheme, it doesn't really
+    matter for now). The Data.Vector package may have an interpolation
+    function for use.
+**** Understand Riemann metric equation, $\textbf{g}=\sum g^{i}\hat{e}_i=\nabla_y d^2(x,y)\vert_{y=p}$, properly.
+***** Read Chapter 13 of [[bibtex:lee2010introductionsmooth][Introduction to Smooth Manifolds]]
+-- The key equation to understand is $g=g_{ij}dx^i\otimes dx^j$
+   where $g$ <-- Riemannian metric - smooth symmetric
+   covariant 2-tensor field on manifold $M$; positive
+   definite at each point. --> $\forall p \in M$, the 2-tensor $g_p$
+   is an inner product on $T_p M$.
+-- Notation in Lee - $\langle v, w\rangle_g$ to denote
+   real number $g_p(v,w)$ for $v,w\in T_p M$
+-- Read some of Mike Hill's lectures to
+   brush up on Tensor Products
+   -- Bi-linear Forms
+   -- Tensor Products
+   -- Matrices for Tensor Products of Maps
+   -- Exterior Products I
+   -- Exterior Products II
+*****
+
+
+** Step 5
+   Estimates of Riemannian normal coordinates for a point $x$ are then
+   obtained as $x^{i}=d(x,p)\frac{g^{i}}{\vert \textbf{g}\vert}$
+*** Coding notes
+    This should be a trivial step. No fanciness needed here.
+* Notes for later
+** Finish up this stuff (Look after Step 3)
+** Test on Swiss Roll and other important data sets
+** Understand Brun's evaluation of $g$.

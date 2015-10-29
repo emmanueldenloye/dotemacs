@@ -1,0 +1,59 @@
+#+DATE: <2015-10-09 Fri>
+#+OPTIONS: texht:t
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS:
+#+LATEX_HEADER:
+#+LATEX_HEADER_EXTRA:
+#+DATE: \today
+#+TITLE: Update on Fast Manifold Learning Based on Normal Coordinates
+
+
+
+
+* Recap (October 09 2015)
+  - In our last meeting, I had shown you the progress I had made.
+  Specifically, I demoed my code for you, and I laid out the steps
+  necessary to finish the work necessary to complete the quench the
+  curiosity this paper has inspired.
+  - The rest of this document will not be a rehash of all the steps
+  for each part of Brun's algorithm. Instead, I will go over some
+  of the issues that I am still encountering, and I how I plan to
+  overcome them.
+
+* A rehash of the last two steps
+
+** Step 4
+   - To calculate the direction from $p$ to every point $x\in X$,
+   estimate $\textbf{g}=\sum g^{i}\hat{e}_i=\nabla_y
+   d^2(x,y)\vert_{y=p}$ numerically, using the values obtained in the
+   previous step. While we only have values of $d^2(x,y)$ for $y\in
+   B(p)$, we must interpolate this function in $T_p M$, e.g. using a
+   second order polynomial, in order to calculate the partial
+   derivatives at $\Psi(p)$. (Working on this part. Will ask for
+   help!)
+
+** Step 5
+   Estimates of Riemannian normal coordinates for a point $x$ are then
+   obtained as $x^{i}=d(x,p)\frac{g^{i}}{\vert \textbf{g}\vert}$
+
+* My issues
+
+** In order to perform Step 4
+   I need to be sure that the matrix I get back from an earlier step
+   that required performing principal component analysis returns a
+   non-singular matrix. Unfortunately, I think there are some
+   numerical instabilities at play here. To recap, I need to compute
+   the principal component analysis over the neighborhood of points
+   surrounding some point $p$ in the data set. When I compute this set
+   (I have varied the neighborhood count from 20 to say 300 or more),
+   I consistently get matrices with zero determinant. "Positively"
+   scaling the matrix does not seem to help. However, I have noticed
+   that when I check for the orthonormal test of the eigen-vectors
+   produced by principal component analysis, I consistently produce a
+   satisfactory result. atnoehutnsao tahoenstuhstao tnahoeunshaoe thaoenushsanoe 
+* Notes for later
+** Finish up this stuff (Look after Step 3)
+*** Update
+    - I have taken care of this. It is fairly straightforward.
+** Test on Swiss Roll and other important data sets
+** Understand Brun's evaluation of $g$.

@@ -1,0 +1,23 @@
+#+DATE: <2015-10-14 Wed>
+#+OPTIONS: texht:t
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS:
+#+LATEX_HEADER:
+#+LATEX_HEADER_EXTRA:
+#+TITLE:Comparison 
+
+* No-reference Image Quality Assessment (IQA)
+
+** Global approach
+
+*** Use global statistic features in concert with  models to determine quality
+
+** Local approach
+
+*** Use an "image content index" as local features
+
+    -- Determine quality among each local region
+
+* Texture Compensation
+
+** Intuition -> complex structure is sensitive to blurring, flat structure is sensitive to noise.

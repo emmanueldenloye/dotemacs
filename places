@@ -1,0 +1,165 @@
+;;; -*- coding: utf-8 -*-
+(("/home/emmanuel/.emacs.d/eshell/alias" . 195)
+ ("/home/emmanuel/.emacs.d/custom/setup-org-present.el" . 736)
+ ("/home/emmanuel/.xsession" . 1884)
+ ("/home/emmanuel/.xinitrc" . 1218)
+ ("/home/emmanuel/.pentadactylrc" . 589)
+ ("/home/emmanuel/.emacs.d/custom/setup-convenience.el" . 10782)
+ ("/home/emmanuel/Documents/"
+  (dired-filename . "/home/emmanuel/Documents/toReadLater"))
+ ("/home/emmanuel/.emacs.d/custom/setup-helm.el" . 3098)
+ ("/home/emmanuel/.emacs.d/custom/setup-faces-and-ui.el" . 476)
+ ("/home/emmanuel/.emacs.d/custom/setup-evil-mode.el" . 1968)
+ ("/home/emmanuel/.emacs.d/custom/setup-files.el" . 115)
+ ("/home/emmanuel/.emacs.d/custom/setup-flyspell.el" . 52)
+ ("/home/emmanuel/.emacs.d/custom/setup-god-mode.el" . 1439)
+ ("/home/emmanuel/.emacs.d/custom/setup-guide-key.el" . 330)
+ ("/home/emmanuel/.emacs.d/custom/setup-local.el" . 52)
+ ("/home/emmanuel/.emacs.d/custom/setup-text.el" . 103)
+ ("/home/emmanuel/.emacs.d/custom/setup-programming.el" . 3184)
+ ("/home/emmanuel/Documents/Code_Repository/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/haskell"))
+ ("/home/emmanuel/Documents/Code_Repository/haskell/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/haskell/ConduitTest"))
+ ("/home/emmanuel/Documents/Code_Repository/haskell/brunfast/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/haskell/brunfast/mnist.txt"))
+ ("/home/emmanuel/.emacs.d/"
+  (dired-filename . "/home/emmanuel/.emacs.d/custom"))
+ ("/home/emmanuel/.emacs.d/custom/setup-org.el" . 638)
+ ("/home/emmanuel/.i3/config" . 6280)
+ ("/home/emmanuel/.emacs.d/url/"
+  (dired-filename . "/home/emmanuel/.emacs.d/url/cookies"))
+ ("/home/emmanuel/.emacs.d/tutorial/"
+  (dired-filename . "/home/emmanuel/.emacs.d/tutorial/English.tut"))
+ ("/home/emmanuel/.emacs.d/icky_custom/"
+  (dired-filename . "/home/emmanuel/.emacs.d/icky_custom/init-acewindow.el"))
+ ("/home/emmanuel/.emacs.d/games/"
+  (dired-filename . "/home/emmanuel/.emacs.d/games/snake-scores"))
+ ("/home/emmanuel/.emacs.d/eshell/"
+  (dired-filename . "/home/emmanuel/.emacs.d/eshell/alias"))
+ ("/home/emmanuel/.emacs.d/elpa/"
+  (dired-filename . "/home/emmanuel/.emacs.d/elpa/magit-20150911.1633"))
+ ("/home/emmanuel/.emacs.d/custom.el" . 52)
+ ("/home/emmanuel/.emacs.d/minor-mode-guide.txt" . 404)
+ ("/home/emmanuel/.emacs.d/My Solarized Dark Theme-theme.el" . 61)
+ ("/home/emmanuel/.emacs.d/auto-save-list/"
+  (dired-filename . "/home/emmanuel/.emacs.d/auto-save-list/.saves-12095-emmanuel-ThinkPad-T400~"))
+ ("/home/emmanuel/.emacs.d/custom/setup-haskell.el" . 4175)
+ ("/home/emmanuel/.emacs.d/custom/setup-editing.el" . 4392)
+ ("/home/emmanuel/.emacs.d/custom/setup-development.el" . 1025)
+ ("/home/emmanuel/.emacs.d/custom/setup-data.el" . 51)
+ ("/home/emmanuel/.emacs.d.bak/themes/"
+  (dired-filename . "/home/emmanuel/.emacs.d.bak/themes/.."))
+ ("/home/emmanuel/.emacs.d.bak/"
+  (dired-filename . "/home/emmanuel/.emacs.d.bak/personal"))
+ ("/home/emmanuel/.emacs.d.bak/auto-save-list/"
+  (dired-filename . "/home/emmanuel/.emacs.d.bak/auto-save-list/.saves-11396-emmanuel-ThinkPad-T400~"))
+ ("/home/emmanuel/.emacs.d.bak/core/"
+  (dired-filename . "/home/emmanuel/.emacs.d.bak/core/prelude-core.el"))
+ ("/home/emmanuel/.emacs.d.bak/elpa/"
+  (dired-filename . "/home/emmanuel/.emacs.d.bak/elpa/ace-window-20150625.2350"))
+ ("/home/emmanuel/.emacs.d.bak/modules/"
+  (dired-filename . "/home/emmanuel/.emacs.d.bak/modules/doc"))
+ ("/home/emmanuel/.emacs.d.bak/personal/"
+  (dired-filename . "/home/emmanuel/.emacs.d.bak/personal/config"))
+ ("/home/emmanuel/.emacs.d.bak/sample/"
+  (dired-filename . "/home/emmanuel/.emacs.d.bak/sample/prelude-modules.el"))
+ ("/home/emmanuel/.emacs.d.bak/savefile/"
+  (dired-filename . "/home/emmanuel/.emacs.d.bak/savefile/eshell"))
+ ("/home/emmanuel/.emacs.d/custom/setup-environment.el" . 2096)
+ ("/home/emmanuel/.emacs.d/elpa/evil-tabs-20150127.1346/evil-tabs-autoloads.el" . 573)
+ ("/home/emmanuel/.emacs.d/elpa/org-pomodoro-2.0.3/org-pomodoro-autoloads.el" . 761)
+ ("/home/emmanuel/.emacs.d/elpa/alert-1.2/alert-autoloads.el" . 3585)
+ ("/home/emmanuel/.emacs.d/elpa/gntp-0.1/gntp-autoloads.el" . 474)
+ ("/home/emmanuel/.emacs.d/elpa/log4e-0.3.0/log4e-autoloads.el" . 224)
+ ("/home/emmanuel/.emacs.d/elpa/gscholar-bibtex-0.3/gscholar-bibtex-autoloads.el" . 540)
+ ("/home/emmanuel/.emacs.d/elpa/haskell-mode-13.14.2/haskell-mode-autoloads.el" . 29807)
+ ("/home/emmanuel/.emacs.d/elpa/ace-window-20150803.837/ace-window.el" . 14159)
+ ("/home/emmanuel/.emacs.d/elpa/elisp-slime-nav-20150805.1248/elisp-slime-nav.el" . 4202)
+ ("/home/emmanuel/.emacs.d/elpa/elisp-slime-nav-20150805.1248/elisp-slime-nav-autoloads.el" . 1247)
+ ("/home/emmanuel/.emacs.d/elpa/structured-haskell-mode/elisp/"
+  (dired-filename . "/home/emmanuel/.emacs.d/elpa/structured-haskell-mode/elisp/check.sh"))
+ ("/home/emmanuel/.emacs.d/elpa/god-mode-20150628.213/god-mode-autoloads.el" . 812)
+ ("/home/emmanuel/.emacs.d/elpa/multiple-cursors-20150710.456/multiple-cursors-autoloads.el" . 8114)
+ ("/home/emmanuel/Downloads/brun2005fast.org" . 827)
+ ("/home/emmanuel/.emacs.d/elpa/paredit-20150217.713/paredit.el" . 5251)
+ ("/usr/local/src/" . 162)
+ ("/home/emmanuel/.emacs.d/elpa/duplicate-thing-20120515.948/"
+  (dired-filename . "/home/emmanuel/.emacs.d/elpa/duplicate-thing-20120515.948/duplicate-thing-autoloads.el"))
+ ("/home/emmanuel/.emacs.d/elpa/paredit-20150217.713/"
+  (dired-filename . "/home/emmanuel/.emacs.d/elpa/paredit-20150217.713/paredit.el"))
+ ("/home/emmanuel/.emacs.d/elpa/ace-window-20150803.837/"
+  (dired-filename . "/home/emmanuel/.emacs.d/elpa/ace-window-20150803.837/ace-window.el"))
+ ("/home/emmanuel/.emacs.d/elpa/linum-relative-20150730.212/linum-relative-autoloads.el" . 250)
+ ("/usr/share/doc/ranger/README" . 3553)
+ ("/usr/share/doc/ranger/config/scope.sh" . 2313)
+ ("/home/emmanuel/Documents/Code_Repository/python/python-randomfields/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/python/python-randomfields/.."))
+ ("/home/emmanuel/Documents/Code_Repository/python/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/python/.."))
+ ("/home/emmanuel/Documents/Code_Repository/java/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/java/.."))
+ ("/home/emmanuel/Documents/Code_Repository/asciidoc/asciidoctor-stylesheet-factory/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/asciidoc/asciidoctor-stylesheet-factory/.."))
+ ("/home/emmanuel/Documents/Code_Repository/asciidoc/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/asciidoc/.."))
+ ("/home/emmanuel/Documents/Code_Repository/haskell/for3DHask/HGamer3D/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/haskell/for3DHask/HGamer3D/.."))
+ ("/home/emmanuel/Documents/Code_Repository/haskell/for3DHask/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/haskell/for3DHask/.."))
+ ("/home/emmanuel/Documents/Code_Repository/python/pythonchallenge/pc0.py" . 2)
+ ("/usr/share/X11/xkb/geometry/"
+  (dired-filename . "/usr/share/X11/xkb/geometry/.."))
+ ("/usr/share/X11/xkb/compat/"
+  (dired-filename . "/usr/share/X11/xkb/compat/.."))
+ ("/usr/share/X11/xkb/"
+  (dired-filename . "/usr/share/X11/xkb/.."))
+ ("/usr/share/X11/"
+  (dired-filename . "/usr/share/X11/xorg.conf.d"))
+ ("/usr/share/X11/xorg.conf.d/"
+  (dired-filename . "/usr/share/X11/xorg.conf.d/.."))
+ ("/etc/X11/xorg.conf.d/"
+  (dired-filename . "/etc/X11/xorg.conf.d/00-keyboard.conf"))
+ ("/etc/X11/xorg.conf.d/00-keyboard.conf" . 101)
+ ("/usr/share/emacs/24.4/etc/TODO" . 80)
+ ("/home/emmanuel/.emacs.d/elpa/volatile-highlights-20141004.2240/volatile-highlights.el" . 3698)
+ ("/home/emmanuel/.emacs.d/elpa/color-theme-sanityinc-solarized-20150803.1420/color-theme-sanityinc-solarized.el" . 93)
+ ("/home/emmanuel/.emacs.d/elpa/color-theme-sanityinc-solarized-20150803.1420/color-theme-sanityinc-solarized-autoloads.el" . 982)
+ ("/home/emmanuel/Downloads/brun2005fast.tex" . 3626)
+ ("/home/emmanuel/.zshrc" . 2991)
+ ("/home/emmanuel/.emacs.d/elpa/key-chord-20150808.1705/key-chord.el" . 13879)
+ ("/home/emmanuel/.emacs.d/elpa/ace-window-20150803.837/ace-window-autoloads.el" . 1598)
+ ("/home/emmanuel/.emacs.d/elpa/key-chord-20150808.1705/key-chord-autoloads.el" . 2098)
+ ("/home/emmanuel/.emacs.d/elpa/evil-matchit-20150728.2006/evil-matchit-autoloads.el" . 7373)
+ ("/home/emmanuel/.emacs.d/elpa/haskell-snippets-20150612.1239/haskell-snippets-autoloads.el" . 555)
+ ("/home/emmanuel/.emacs.d/elpa/helm-bibtex-20150611.915/helm-bibtex-autoloads.el" . 375)
+ ("/home/emmanuel/.emacs.d/elpa/parsebib-20150205.1305/parsebib-autoloads.el" . 230)
+ ("/home/emmanuel/.emacs.d/elpa/f-20150605.927/f-autoloads.el" . 215)
+ ("/home/emmanuel/.emacs.d/elpa/evil-anzu-20150124.1609/evil-anzu-autoloads.el" . 232)
+ ("/home/emmanuel/.emacs.d/elpa/evil-args-20140329.1429/evil-args-autoloads.el" . 710)
+ ("/home/emmanuel/.emacs.d/elpa/paxedit-20150405.1608/paxedit-autoloads.el" . 12543)
+ ("/home/emmanuel/.emacs.d/elpa/drag-stuff-20150717.532/drag-stuff-autoloads.el" . 1480)
+ ("/home/emmanuel/.emacs.d/elpa/evil-commentary-20150628.1054/evil-commentary-autoloads.el" . 824)
+ ("/home/emmanuel/.emacs.d/elpa/evil-leader-20140606.543/evil-leader-autoloads.el" . 1078)
+ ("/home/emmanuel/.emacs.d/elpa/evil-lisp-state-20150328.736/evil-lisp-state-autoloads.el" . 251)
+ ("/home/emmanuel/.emacs.d/elpa/evil-mark-replace-20150424.18/evil-mark-replace-autoloads.el" . 1231)
+ ("/home/emmanuel/.emacs.d/elpa/evil-numbers-20140606.551/evil-numbers-autoloads.el" . 976)
+ ("/home/emmanuel/.emacs.d/elpa/evil-org-20150513.1610/evil-org-autoloads.el" . 230)
+ ("/home/emmanuel/.emacs.d/elpa/evil-paredit-20150413.1348/evil-paredit-autoloads.el" . 440)
+ ("/home/emmanuel/.emacs.d/elpa/paredit-20150217.713/paredit-autoloads.el" . 802)
+ ("/home/emmanuel/.emacs.d/elpa/evil-surround-20150605.2306/evil-surround-autoloads.el" . 2192)
+ ("/home/emmanuel/.emacs.d/elpa/evil-visual-mark-mode-20150202.1000/evil-visual-mark-mode-autoloads.el" . 866)
+ ("/home/emmanuel/.emacs.d/elpa/evil-visualstar-20150514.1410/evil-visualstar-autoloads.el" . 1534)
+ ("/home/emmanuel/.emacs.d/elpa/goto-chg-20131228.1459/goto-chg-autoloads.el" . 1874)
+ ("/home/emmanuel/.emacs.d/elpa/color-theme-sanityinc-tomorrow-20150803.1419/color-theme-sanityinc-tomorrow-autoloads.el" . 1495)
+ ("/home/emmanuel/.emacs.d/elpa/workgroups-20110726.941/workgroups-autoloads.el" . 233)
+ ("/home/emmanuel/.emacs.d/elpa/flycheck-tip-20150726.156/flycheck-tip-autoloads.el" . 1827)
+ ("/home/emmanuel/.emacs.d/elpa/popup-20150626.711/popup-autoloads.el" . 224)
+ ("/home/emmanuel/.emacs.d/elpa/let-alist-1.0.4/let-alist-autoloads.el" . 1252)
+ ("/home/emmanuel/.emacs.d/elpa/helm-descbinds-20140122.2158/helm-descbinds-autoloads.el" . 1173)
+ ("/home/emmanuel/.emacs.d/elpa/recentf-ext-20130130.2150/recentf-ext-autoloads.el" . 244)
+ ("/home/emmanuel/.emacs.d/elpa/rainbow-mode-0.11/rainbow-mode-autoloads.el" . 483)
+ ("/home/emmanuel/.emacs.d/elpa/discover-my-major-20140510.1007/discover-my-major-autoloads.el" . 548)
+ ("/home/emmanuel/.emacs.d/elpa/makey-20131231.630/makey-autoloads.el" . 415)
+ ("/home/emmanuel/.emacs.d/elpa/highlight-symbol-20150816.628/highlight-symbol-autoloads.el" . 2829)
+ ("/home/emmanuel/.emacs.d/elpa/highlight-numbers-20150531.607/highlight-numbers-autoloads.el" . 712))
