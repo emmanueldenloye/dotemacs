@@ -78,6 +78,8 @@
 
 (define-key minibuffer-local-map (kbd "C-c C-l") 'helm-minibuffer-history)
 
+(global-set-key (kbd "C-c h C-b") 'helm-bibtex)
+
 (require-package 'helm-descbinds)
 (require 'helm-descbinds)
 (helm-descbinds-mode)

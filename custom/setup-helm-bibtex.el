@@ -28,9 +28,6 @@
 
 (autoload 'helm-bibtex "helm-bibtex" "" t)
 
-(eval-after-load "helm"
-  '(global-set-key (kbd "C-c h C-b") 'helm-bibtex))
-
 (setq helm-bibtex-bibliography (list
                                 "~/Dropbox/Research_Files/misc/misc.bib"
                                 "~/Dropbox/Research_Files/topology/topology.bib"

@@ -45,9 +45,9 @@
 
 (highlight-symbol-nav-mode)
 
-(add-hook 'prog-mode-hook
-          (lambda ()
-            (highlight-symbol-mode)))
+;; (remove-hook 'prog-mode-hook
+;;           (lambda ()
+;;             (highlight-symbol-mode)))
 
 (setq highlight-symbol-idle-delay 0.5
       highlight-symbol-on-navigation-p t)

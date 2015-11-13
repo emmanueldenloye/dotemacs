@@ -81,7 +81,6 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key [remap move-beginning-of-line]
 		'smarter-move-beginning-of-line)
 
-
 (require 'duplicate-thing)
 (global-set-key (kbd "C-c d") 'duplicate-thing)
 

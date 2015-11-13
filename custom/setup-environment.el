@@ -25,10 +25,22 @@
 
 (global-set-key (kbd "M-#") 'ace-window)
 
-;; Remapped for programmer dvorak.
+;; Remapped for Programmer Dvorak.
 (setq aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))
 
 (setq aw-background nil)
+
+(setq aw-dispatch-always t)
+
+(defvar aw-dispatch-alist
+  '((?x aw-delete-window "Ace - Delete Window")
+    (?m aw-swap-window " Ace - Swap Window")
+    (?f aw-flip-window)
+    (?v aw-split-window-vert " Ace - Split Vert Window")
+    (?b aw-split-window-horz " Ace - Split Horz Window")
+    (?c delete-other-windows " Ace - Maximize Window")
+    (?C delete-other-windows))
+  "List of actions for `aw-dispatch-default'.")
 
 (diminish 'eldoc-mode)
 ;; (diminish 'highlight-symbol-mode)

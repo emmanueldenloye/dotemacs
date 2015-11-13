@@ -13,9 +13,7 @@
    (vector "#4d4d4c" "#c82829" "#718c00" "#eab700" "#4271ae" "#8959a8" "#3e999f" "#ffffff"))
  '(avy-all-windows (quote all-frames))
  '(company-ghc-show-info t)
- '(custom-enabled-themes
-   (quote
-    (sanityinc-solarized-light sanityinc-solarized-dark)))
+ '(custom-enabled-themes (quote (sanityinc-solarized-light)))
  '(custom-safe-themes
    (quote
     ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
@@ -67,4 +65,5 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :foundry "unknown" :family "Inconsolata"))))
  '(shm-current-face ((t (:background "#eee8d5"))))
- '(shm-quarantine-face ((t (:background "lemon chiffon")))))
+ '(shm-quarantine-face ((t (:background "
+lemon chiffon")))))

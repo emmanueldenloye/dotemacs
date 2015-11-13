@@ -65,8 +65,10 @@
    (concat
     "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
     (url-hexify-string (if mark-active
-                           (buffer-substring (region-beginning) (region-end))
+                           (bbuffer-substring (region-beginning) (region-end))
                          (read-string "Search Google: "))))))
+
+(global-set-key (kbd "C-c / g") 'eod/search-google)
 
 (defun eod/search-duckduckgo ()
   "Google the selected region if any, display a query prompt otherwise."
@@ -78,6 +80,8 @@
                            (buffer-substring (region-beginning) (region-end))
                          (read-string "Search DuckDuckGo: ")))
     "&ia=about")))
+
+(global-set-key (kbd "C-c / d") 'eod/search-duckduckgo)
 
 (provide 'setup-eod-defuns)
 ;;; setup-eod-defuns.el ends here

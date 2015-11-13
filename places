@@ -1,13 +1,15 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/emmanuel/.emacs.d/.git/MERGE_MSG" . 84)
+(("/home/emmanuel/.emacs.d/custom/setup-helm.el" . 3111)
+ ("/home/emmanuel/.emacs.d/eshell/alias" . 195)
+ ("/home/emmanuel/.xsession" . 2036)
+ ("/home/emmanuel/.emacs.d/custom/setup-convenience.el" . 8887)
+ ("/home/emmanuel/.i3/config" . 6606)
+ ("/home/emmanuel/.emacs.d/custom/setup-editing.el" . 5063)
  ("/home/emmanuel/.emacs.d/custom/setup-org-present.el" . 736)
- ("/home/emmanuel/.xsession" . 1884)
  ("/home/emmanuel/.xinitrc" . 1218)
  ("/home/emmanuel/.pentadactylrc" . 589)
- ("/home/emmanuel/.emacs.d/custom/setup-convenience.el" . 10782)
  ("/home/emmanuel/Documents/"
   (dired-filename . "/home/emmanuel/Documents/toReadLater"))
- ("/home/emmanuel/.emacs.d/custom/setup-helm.el" . 3098)
  ("/home/emmanuel/.emacs.d/custom/setup-faces-and-ui.el" . 476)
  ("/home/emmanuel/.emacs.d/custom/setup-evil-mode.el" . 1968)
  ("/home/emmanuel/.emacs.d/custom/setup-files.el" . 115)
@@ -26,7 +28,6 @@
  ("/home/emmanuel/.emacs.d/"
   (dired-filename . "/home/emmanuel/.emacs.d/custom"))
  ("/home/emmanuel/.emacs.d/custom/setup-org.el" . 638)
- ("/home/emmanuel/.i3/config" . 6280)
  ("/home/emmanuel/.emacs.d/url/"
   (dired-filename . "/home/emmanuel/.emacs.d/url/cookies"))
  ("/home/emmanuel/.emacs.d/tutorial/"
@@ -45,7 +46,6 @@
  ("/home/emmanuel/.emacs.d/auto-save-list/"
   (dired-filename . "/home/emmanuel/.emacs.d/auto-save-list/.saves-12095-emmanuel-ThinkPad-T400~"))
  ("/home/emmanuel/.emacs.d/custom/setup-haskell.el" . 4175)
- ("/home/emmanuel/.emacs.d/custom/setup-editing.el" . 4392)
  ("/home/emmanuel/.emacs.d/custom/setup-development.el" . 1025)
  ("/home/emmanuel/.emacs.d/custom/setup-data.el" . 51)
  ("/home/emmanuel/.emacs.d.bak/themes/"
@@ -81,7 +81,6 @@
   (dired-filename . "/home/emmanuel/.emacs.d/elpa/structured-haskell-mode/elisp/check.sh"))
  ("/home/emmanuel/.emacs.d/elpa/god-mode-20150628.213/god-mode-autoloads.el" . 812)
  ("/home/emmanuel/.emacs.d/elpa/multiple-cursors-20150710.456/multiple-cursors-autoloads.el" . 8114)
- ("/home/emmanuel/Downloads/brun2005fast.org" . 827)
  ("/home/emmanuel/.emacs.d/elpa/paredit-20150217.713/paredit.el" . 5251)
  ("/usr/local/src/" . 162)
  ("/home/emmanuel/.emacs.d/elpa/duplicate-thing-20120515.948/"
@@ -125,7 +124,6 @@
  ("/home/emmanuel/.emacs.d/elpa/volatile-highlights-20141004.2240/volatile-highlights.el" . 3698)
  ("/home/emmanuel/.emacs.d/elpa/color-theme-sanityinc-solarized-20150803.1420/color-theme-sanityinc-solarized.el" . 93)
  ("/home/emmanuel/.emacs.d/elpa/color-theme-sanityinc-solarized-20150803.1420/color-theme-sanityinc-solarized-autoloads.el" . 982)
- ("/home/emmanuel/Downloads/brun2005fast.tex" . 3626)
  ("/home/emmanuel/.zshrc" . 2991)
  ("/home/emmanuel/.emacs.d/elpa/key-chord-20150808.1705/key-chord.el" . 13879)
  ("/home/emmanuel/.emacs.d/elpa/ace-window-20150803.837/ace-window-autoloads.el" . 1598)

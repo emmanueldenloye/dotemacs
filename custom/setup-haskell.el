@@ -93,7 +93,7 @@
 
 (add-to-list 'load-path "/home/emmanuel/.emacs.d/elpa/structured-haskell-mode/elisp")
 (require-package 'shm)
-(add-hook 'haskell-mode-hook 'structured-haskell-mode)
+;; (add-hook 'haskell-mode-hook 'structured-haskell-mode)
 (require 'shm)
 (require 'shm-case-split)
 ;; (eval-after-load 'structured-haskell-mode

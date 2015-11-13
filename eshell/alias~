@@ -1,4 +1,0 @@
-alias emacs find-file-other-window $*
-alias vim find-file-other-window $*
-alias vi find-file-other-window $*
-alias o find-file-other-window $*

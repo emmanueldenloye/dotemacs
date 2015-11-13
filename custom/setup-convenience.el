@@ -242,7 +242,7 @@ locate PACKAGE."
 (key-chord-define-global "uu" 'undo-tree-visualize)
 (key-chord-define-global "xb" 'helm-mini)
 (key-chord-define-global "xf" 'helm-find-files)
-(key-chord-define-global "yy" 'helm-show-kill-ring)
+(key-chord-define-global "yy" 'browse-kill-ring)
 
 (require-package 'flycheck)
 (require 'flycheck)
@@ -259,17 +259,17 @@ locate PACKAGE."
 (setq avy-background t)
 
 ;; key chords are nice
+(key-chord-define-global "jc" 'avy-goto-char-in-line)
 (key-chord-define-global "jj" 'avy-goto-char)
 (key-chord-define-global "jk" 'avy-goto-word-or-subword-1)
 (key-chord-define-global "jl" 'avy-goto-line)
-(key-chord-define-global "js" 'avy-isearch)
-(key-chord-define-global "jc" 'avy-goto-char-in-line)
+(global-set-key (kbd "C-c a c") 'avy-copy-line)
 (global-set-key (kbd "C-C a p") 'avy-pop-mark)
 (global-set-key (kbd "C-c a m") 'avy-move-line)
-(global-set-key (kbd "C-c a c") 'avy-copy-line)
 (global-set-key (kbd "C-c a r") 'avy-copy-region)
+(global-set-key (kbd "C-c a s") 'avy-isearch)
 
-;; Modify this code to perform avy-save-kill-region... That would be sweet.
+;; Modify this code to perform avy-save-kill-region... That would be sweet!
 ;; (defun avy-copy-region ()
 ;;   "Select two lines and copy the text between them here."
 ;;   (interactive)
