@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 
-
 (require-package 'haskell-mode)
 
 (add-to-list 'load-path "~/Documents/Code_Repository/haskell/haskell_libs/ghc-mod/elisp")

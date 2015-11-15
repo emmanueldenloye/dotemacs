@@ -24,6 +24,7 @@
  erc-autojoin-channels-alist
       '(("freenode.net" "#haskell")
         ("freenode.net" "#emacs")
+        ("freenode.net" "#numerical-haskell")
         ("freenode.net" "#haskell-beginners")
         ("irc.oftc.net" "#pentadactyl")))
 

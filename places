@@ -1,6 +1,7 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/emmanuel/.emacs.d/custom/setup-helm.el" . 3111)
- ("/home/emmanuel/.emacs.d/eshell/alias" . 195)
+(("/home/emmanuel/.emacs.d/eshell/alias" . 195)
+ ("/home/emmanuel/.emacs.d/custom.el" . 576)
+ ("/home/emmanuel/.emacs.d/custom/setup-helm.el" . 3111)
  ("/home/emmanuel/.xsession" . 2036)
  ("/home/emmanuel/.emacs.d/custom/setup-convenience.el" . 8887)
  ("/home/emmanuel/.i3/config" . 6606)
@@ -40,7 +41,6 @@
   (dired-filename . "/home/emmanuel/.emacs.d/eshell/alias"))
  ("/home/emmanuel/.emacs.d/elpa/"
   (dired-filename . "/home/emmanuel/.emacs.d/elpa/magit-20150911.1633"))
- ("/home/emmanuel/.emacs.d/custom.el" . 52)
  ("/home/emmanuel/.emacs.d/minor-mode-guide.txt" . 404)
  ("/home/emmanuel/.emacs.d/My Solarized Dark Theme-theme.el" . 61)
  ("/home/emmanuel/.emacs.d/auto-save-list/"

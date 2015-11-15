@@ -2,21 +2,21 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("xmonad config"
+(("manifoldRML"
+ (filename . "~/Dropbox/haskell/manifoldRML/")
+ (front-context-string . "dist\n  drwxrwxr-")
+ (rear-context-string . "0K Nov 12 22:58 ")
+ (position . 257))
+("manifoldRNC"
+ (filename . "~/Dropbox/haskell/brun_fast_git/")
+ (front-context-string . ".cabal-sandbox\n ")
+ (rear-context-string . "0K Oct 29 18:25 ")
+ (position . 260))
+("xmonad config"
  (filename . "~/.xmonad/xmonad.hs")
  (front-context-string . "import          ")
  (rear-context-string)
  (position . 1))
-("brun2005fast code"
- (filename . "~/Dropbox/haskell/brunfast_CUR/init_present.hs")
- (front-context-string . "import          ")
- (rear-context-string)
- (position . 1))
-("brun2005fast.org"
- (filename . "~/Dropbox/org/brun2005fast.org")
- (front-context-string . " We then use Dij")
- (rear-context-string . "  ambient space.")
- (position . 2182))
 ("i3config"
  (filename . "~/.i3/config")
  (front-context-string . "\n# resize window")

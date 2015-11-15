@@ -65,7 +65,7 @@
    (concat
     "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
     (url-hexify-string (if mark-active
-                           (bbuffer-substring (region-beginning) (region-end))
+                           (buffer-substring (region-beginning) (region-end))
                          (read-string "Search Google: "))))))
 
 (global-set-key (kbd "C-c / g") 'eod/search-google)

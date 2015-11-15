@@ -79,7 +79,7 @@
 (my-move-key evil-motion-state-map evil-normal-state-map (kbd "RET"))
 (my-move-key evil-motion-state-map evil-normal-state-map " ")
 
-(setq evil-want-C-u-scroll t)
+(setq evil-want-C-u-scroll nil)
 (setq evil-emacs-state-cursor '("white" box))
 (setq evil-normal-state-cursor '("yellow" box))
 (setq evil-visual-state-cursor '("purple" box))

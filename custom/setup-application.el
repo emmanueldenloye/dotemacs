@@ -22,7 +22,9 @@
 (eshell/alias "vim" "find-file-other-window $*")
 (eshell/alias "emacs" "find-file-other-window $*")
 
-
+(add-hook
+ 'eshell-mode-hook
+ 'smartparens-mode)
 
 (add-hook
  'eshell-mode-hook
