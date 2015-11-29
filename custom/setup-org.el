@@ -1,17 +1,19 @@
-;; ;;; package --- Summary
-;; ;;; Commentary:
-;; ;;; Code:
+;; package --- Summary
+;; Commentary:
+;; Code:
 
+(require 'org)
 
-;; (remove-hook 'org-mode-hook (lambda ()
-;;                             (linum-mode)
-;;                             (linum-relative-on)
-;;                             (setq linum-relative-current-symbol "")))
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
 
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a a") 'org-agenda)
+(global-set-key (kbd "C-c b") 'org-iswitchb)
 
 (setq org-src-fontify-natively t)
 
 (require 'ox-latex)
+
 (add-to-list 'org-latex-classes
              '("beamer"
                "\\documentclass\[presentation\]\{beamer\}"
@@ -58,10 +60,9 @@
 ;;       ;;org-fast-tag-selection-single-key 'expert
 ;;       org-tags-column 80)
 
-
 ;; ;; (setq  org-support-shift-select t)
 
-;; (global-set-key (kbd "C-c c") 'org-capture)
+;; (global-set-key (kbd "C-c .") 'org-capture)
 
 ;; (setq org-capture-templates
 ;;       `(("t" "todo" entry (file "")     ; " => org-default-notes-file

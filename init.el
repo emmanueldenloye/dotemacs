@@ -22,8 +22,10 @@
 ;;; If there are any errors, print a message to the back trace buffer.
 (let ((debug-on-error t)
       (custom-directory (concat user-emacs-directory "custom/")))
-  ; (require 'init-util (concat custom-directory "init-util.el"))
-  (setq custom-file (concat user-emacs-directory "custom.el"))
+
+  (setq custom-file
+        (concat user-emacs-directory "custom.el"))
+
   (when (file-exists-p custom-file)
     (load custom-file))
 
@@ -34,7 +36,3 @@
 (put 'set-goal-column 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
-
-;; (diminish 'flyspell-mode)
-;; (provide 'init)
-;; init.el ends here

@@ -26,7 +26,7 @@
 (global-set-key (kbd "<f5>") 'compile)
 
 (defun prelude-makefile-mode-defaults ()
-  (whitespace-toggel-options '(tabs))
+  (whitespace-toggle-options '(tabs))
   (setq indent-tabs-mode t))
 
 (setq prelude-makefile-mode-hook 'prelude-makefile-mode-defaults)
@@ -64,7 +64,7 @@
 (require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-;; Fix this crap at a later time. It is truly a whopping turd fest! GROSS!!
+;; Fix this crap at a later time.
 ;; (defun flymake-Haskell-init ()
 ;;   (flymake-simple-make-init-impl
 ;;    'flymake-create-temp-with-folder-structure nil nil

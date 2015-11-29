@@ -5,7 +5,7 @@
 (require-package 'powerline)
 (require 'powerline)
 
-(powerline-center-evil-theme)
+(powerline-center-theme)
 
 (provide 'setup-powerline)
 ;;; setup-powerline.el ends here

@@ -21,10 +21,7 @@
  auto-save-timeout 20
  auto-save-interval 200
  vc-make-backup-files t
- auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t))
-)
-
-
+ auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
 
 (setq
  dired-dwim-target t
@@ -55,17 +52,19 @@
 ;; (define-key dired-mode-map "V" 'dired-do-run-mail)
 (require 'dired-x) ; provide extra commands dired
 
-
 (require 'wdired)
+
 (setq
  wdired-allow-to-change-premissions t 	; allow to edit permission bits
  widred-allow-to-redirect-links		; allow to edit symlinks
  )
 
 (recentf-mode)
+
 (setq
  recentf-max-menu-items 30
- recentf-max-saved-items 5000 )
+ recentf-max-saved-items 5000
+)
 
 (require 'dired+)
 (require 'recentf-ext)

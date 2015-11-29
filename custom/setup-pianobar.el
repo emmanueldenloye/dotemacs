@@ -14,8 +14,8 @@
 (setq pianobar-password "nRLfP26eva")   ; I don't care.
 
 (defun pianobar-message-current-song ()
-  (interactive)
-  (message (concat "Artist : " pianobar-current-artist " || Song : " pianobar-current-song)))
+ (interactive)
+ (message (concat "Artist : " pianobar-current-artist " || Song : " pianobar-current-song)))
 
 (provide 'setup-pianobar)
 ;;; setup-pianobar.el ends here

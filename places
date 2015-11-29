@@ -1,34 +1,42 @@
 ;;; -*- coding: utf-8 -*-
 (("/home/emmanuel/.emacs.d/eshell/alias" . 195)
- ("/home/emmanuel/.emacs.d/custom.el" . 576)
- ("/home/emmanuel/.emacs.d/custom/setup-helm.el" . 3111)
- ("/home/emmanuel/.xsession" . 2036)
- ("/home/emmanuel/.emacs.d/custom/setup-convenience.el" . 8887)
- ("/home/emmanuel/.i3/config" . 6606)
- ("/home/emmanuel/.emacs.d/custom/setup-editing.el" . 5063)
+ ("/home/emmanuel/.emacs.d/custom/setup-ace-jump-line.el" . 351)
+ ("/home/emmanuel/.cabal/packages/hackage.haskell.org/ghc-mod/5.4.0.0/ghc-mod-5.4.0.0.tar.gz" . 211)
+ ("/home/emmanuel/.emacs.d/custom/"
+  (dired-filename . "/home/emmanuel/.emacs.d/custom/setup-helm-bibtex.el"))
+ ("/home/emmanuel/.emacs.d/custom/setup-convenience.el" . 13519)
+ ("/home/emmanuel/.emacs.d/"
+  (dired-filename . "/home/emmanuel/.emacs.d/.git"))
+ ("/home/emmanuel/.emacs.d/custom/setup-text.el" . 103)
+ ("/home/emmanuel/.emacs.d/custom/setup-programming.el" . 2366)
+ ("/home/emmanuel/.emacs.d/custom/setup-faces-and-ui.el" . 3343)
+ ("/home/emmanuel/.emacs.d/custom/setup-editing.el" . 971)
  ("/home/emmanuel/.emacs.d/custom/setup-org-present.el" . 736)
+ ("/home/emmanuel/.emacs.d/custom/setup-org.el" . 2182)
+ ("/home/emmanuel/.emacs.d/custom/setup-local.el" . 52)
+ ("/home/emmanuel/.emacs.d/custom/setup-helm.el" . 3111)
+ ("/home/emmanuel/.emacs.d/custom/setup-haskell.el" . 4175)
+ ("/home/emmanuel/.emacs.d/custom/setup-guide-key.el" . 330)
+ ("/home/emmanuel/.emacs.d/custom/setup-god-mode.el" . 1439)
+ ("/home/emmanuel/.emacs.d/custom/setup-flyspell.el" . 52)
+ ("/home/emmanuel/.emacs.d/custom/setup-files.el" . 1266)
+ ("/home/emmanuel/.emacs.d/custom/setup-environment.el" . 2049)
+ ("/home/emmanuel/.emacs.d/custom/setup-development.el" . 277)
+ ("/home/emmanuel/.emacs.d/custom/setup-data.el" . 51)
+ ("/home/emmanuel/.emacs.d/custom.el" . 1369)
+ ("/home/emmanuel/.xsession" . 2036)
+ ("/home/emmanuel/.i3/config" . 6606)
  ("/home/emmanuel/.xinitrc" . 1218)
  ("/home/emmanuel/.pentadactylrc" . 589)
  ("/home/emmanuel/Documents/"
   (dired-filename . "/home/emmanuel/Documents/toReadLater"))
- ("/home/emmanuel/.emacs.d/custom/setup-faces-and-ui.el" . 476)
  ("/home/emmanuel/.emacs.d/custom/setup-evil-mode.el" . 1968)
- ("/home/emmanuel/.emacs.d/custom/setup-files.el" . 115)
- ("/home/emmanuel/.emacs.d/custom/setup-flyspell.el" . 52)
- ("/home/emmanuel/.emacs.d/custom/setup-god-mode.el" . 1439)
- ("/home/emmanuel/.emacs.d/custom/setup-guide-key.el" . 330)
- ("/home/emmanuel/.emacs.d/custom/setup-local.el" . 52)
- ("/home/emmanuel/.emacs.d/custom/setup-text.el" . 103)
- ("/home/emmanuel/.emacs.d/custom/setup-programming.el" . 3184)
  ("/home/emmanuel/Documents/Code_Repository/"
   (dired-filename . "/home/emmanuel/Documents/Code_Repository/haskell"))
  ("/home/emmanuel/Documents/Code_Repository/haskell/"
   (dired-filename . "/home/emmanuel/Documents/Code_Repository/haskell/ConduitTest"))
  ("/home/emmanuel/Documents/Code_Repository/haskell/brunfast/"
   (dired-filename . "/home/emmanuel/Documents/Code_Repository/haskell/brunfast/mnist.txt"))
- ("/home/emmanuel/.emacs.d/"
-  (dired-filename . "/home/emmanuel/.emacs.d/custom"))
- ("/home/emmanuel/.emacs.d/custom/setup-org.el" . 638)
  ("/home/emmanuel/.emacs.d/url/"
   (dired-filename . "/home/emmanuel/.emacs.d/url/cookies"))
  ("/home/emmanuel/.emacs.d/tutorial/"
@@ -45,9 +53,6 @@
  ("/home/emmanuel/.emacs.d/My Solarized Dark Theme-theme.el" . 61)
  ("/home/emmanuel/.emacs.d/auto-save-list/"
   (dired-filename . "/home/emmanuel/.emacs.d/auto-save-list/.saves-12095-emmanuel-ThinkPad-T400~"))
- ("/home/emmanuel/.emacs.d/custom/setup-haskell.el" . 4175)
- ("/home/emmanuel/.emacs.d/custom/setup-development.el" . 1025)
- ("/home/emmanuel/.emacs.d/custom/setup-data.el" . 51)
  ("/home/emmanuel/.emacs.d.bak/themes/"
   (dired-filename . "/home/emmanuel/.emacs.d.bak/themes/.."))
  ("/home/emmanuel/.emacs.d.bak/"
@@ -66,7 +71,6 @@
   (dired-filename . "/home/emmanuel/.emacs.d.bak/sample/prelude-modules.el"))
  ("/home/emmanuel/.emacs.d.bak/savefile/"
   (dired-filename . "/home/emmanuel/.emacs.d.bak/savefile/eshell"))
- ("/home/emmanuel/.emacs.d/custom/setup-environment.el" . 2096)
  ("/home/emmanuel/.emacs.d/elpa/evil-tabs-20150127.1346/evil-tabs-autoloads.el" . 573)
  ("/home/emmanuel/.emacs.d/elpa/org-pomodoro-2.0.3/org-pomodoro-autoloads.el" . 761)
  ("/home/emmanuel/.emacs.d/elpa/alert-1.2/alert-autoloads.el" . 3585)

@@ -41,15 +41,15 @@
 
 ;; (require 'hackernews)
 
+;; (require 'linum-relative)
 
-(require 'linum-relative)
+;; (add-hook 'prog-mode-hook (lambda ()
+;;                             (linum-mode)
+;;                             (linum-relative-on)
+;;                             (setq linum-relative-current-symbol "")))
 
-(add-hook 'prog-mode-hook (lambda ()
-                            (linum-mode)
-                            (linum-relative-on)
-                            (setq linum-relative-current-symbol "")))
 ;; enable linum only in programming modes or when said so at a later time.
-(global-set-key (kbd "C-c C-l t") 'linum-relative-toggle)
+;; (global-set-key (kbd "C-c C-l t") 'linum-relative-toggle)
 
 ;; Align regexp is a beautiful function.
 ;; Include this function as an operator in evil-mode.
@@ -243,6 +243,8 @@ locate PACKAGE."
 (key-chord-define-global "xb" 'helm-mini)
 (key-chord-define-global "xf" 'helm-find-files)
 (key-chord-define-global "yy" 'browse-kill-ring)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-c m") 'mail)
 
 (require-package 'flycheck)
 (require 'flycheck)
@@ -263,6 +265,8 @@ locate PACKAGE."
 (key-chord-define-global "jj" 'avy-goto-char)
 (key-chord-define-global "jk" 'avy-goto-word-or-subword-1)
 (key-chord-define-global "jl" 'avy-goto-line)
+(key-chord-define-global ",." (lambda () (interactive) (insert "$")))
+
 (global-set-key (kbd "C-c a c") 'avy-copy-line)
 (global-set-key (kbd "C-C a p") 'avy-pop-mark)
 (global-set-key (kbd "C-c a m") 'avy-move-line)
@@ -294,6 +298,16 @@ locate PACKAGE."
   (interactive)
   (kill-buffer (current-buffer)))
 
+(defun eod-insert-buffer-directory ()
+  "Insert the directory of the current bufer (FILENAME)"
+  (interactive)
+  (let ((filename (buffer-file-name)))
+    (when (and
+           (not (file-directory-p filename))
+           (file-exists-p filename)
+           (eq major-mode 'dired-mode))
+      (insert (file-name-directory filename)))))
+
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'org-mode-hook #'rainbow-delimiters-mode)
@@ -302,6 +316,9 @@ locate PACKAGE."
 (require 'elisp-slime-nav)
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
     (add-hook hook 'turn-on-elisp-slime-nav-mode))
+
+;;; set the time to show partially completed keystrokes to a tenth of a second.
+(setq echo-keystrokes 0.1)
 
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 
@@ -392,6 +409,10 @@ With a prefix arg, INSERT it into the buffer."
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
 
+;;; get rid of some items in the mode line
+;; (diminish 'company-mode)
+(diminish 'projectile-mode)
+(diminish 'elisp-slime-nav-mode)
 
 ;;; set up smartparens for config files
 (add-hook 'conf-space-mode-hook 'turn-on-smartparens-mode)

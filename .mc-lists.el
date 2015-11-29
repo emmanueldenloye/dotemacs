@@ -3,6 +3,9 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        eval-sexp-and-replace
+        haskell-mode-contextual-space
+        sp-forward-slurp-sexp
         ))
 
 (setq mc/cmds-to-run-once

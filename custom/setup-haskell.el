@@ -4,7 +4,7 @@
 
 (require-package 'haskell-mode)
 
-(add-to-list 'load-path "~/Documents/Code_Repository/haskell/haskell_libs/ghc-mod/elisp")
+(add-to-list 'load-path "~/Documents/Code_Repository/haskell/haskell_libs/ghc-mod-5.4.0.0/elisp")
 
 (let ((my-cabal-path (expand-file-name "~/.cabal/bin")))
   (setenv "PATH" (concat my-cabal-path path-separator (getenv "PATH")))
@@ -13,6 +13,10 @@
 (let ((my-ghc-path (expand-file-name "~/Development/bin/ghc/bin/")))
   (setenv "PATH" (concat my-ghc-path path-separator (getenv "PATH")))
   (add-to-list 'exec-path my-ghc-path))
+
+;; (add-to-list
+;;  'load-path
+;;  "~/.cabal/packgaes")
 
 (custom-set-variables '(haskell-tags-on-save t))
 
@@ -57,6 +61,24 @@
 ;;               (add-to-list
 ;;                'compilation-error-regexp-alist alias)))
 
+(defun haskell-wrap-with-paren-pair-and-fix-indent (&optional arg)
+  "Wrap the number 'ARG' of words/sexps thing at point with some give delimiter."
+  (interactive "P")
+  (sp-wrap-with-pair "(")
+  (haskell-indentation-indent-backwards))
+
+(defun eod-haskell-mode-insert-undefined-at-point ()
+  "Insert undefined at point, you lazy schmuck!"
+  (interactive)
+  (when (eq major-mode 'haskell-mode)
+    (insert "undefined")))
+
+(defun haskell-sp-splice-sexp (&optional arg)
+  "Requisite documentation ARG!"
+  (interactive "p")
+  (sp-splice-sexp arg)
+  (haskell-indentation-indent-backwards))
+
 (eval-after-load 'haskell-mode
   '(progn
     (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
@@ -66,15 +88,18 @@
     (define-key haskell-mode-map (kbd "C-c C-n C-c") 'haskell-cabal-build)
     (define-key haskell-mode-map (kbd "C-c C-n c") 'haskell-process-cabal)
     (define-key haskell-mode-map (kbd "C-c C-o") 'haskell-compile)
+    (define-key haskell-mode-map (kbd "C-c C-.") 'haskell-format-imports)
+    (define-key haskell-mode-map (kbd "C-c .") 'haskell-indent-align-guards-and-rhs)
     (define-key haskell-mode-map (kbd "C-c TAB") 'ghc-insert-template-or-signature)
-    (define-key haskell-mode-map (kbd "C-c C-p") 'highlight-symbol-prev)
-    (define-key haskell-mode-map (kbd "C-c C-n") 'highlight-symbol-next)
+    (define-key haskell-mode-map (kbd "C-c C-u") 'eod-haskell-mode-insert-undefined-at-point)
+    (define-key haskell-mode-map (kbd "M-s") 'haskell-sp-splice-sexp)
+    (define-key haskell-mode-map (kbd "M-(") 'haskell-wrap-with-paren-pair-and-fix-indent)
     (define-key haskell-mode-map (kbd "M-g M-p") 'ghc-goto-prev-error)
     (define-key haskell-mode-map (kbd "M-g M-n") 'ghc-goto-next-error)
     (define-key haskell-mode-map (kbd "M-g h M-p") 'ghc-goto-prev-hole)
     (define-key haskell-mode-map (kbd "M-g h M-n") 'ghc-goto-next-hole)
     (define-key haskell-mode-map [f8] 'haskell-navigate-imports)
-    (define-key haskell-mode-map (kbd "C-c C-h") 'hoogle)
+    (define-key haskell-mode-map (kbd "C-c C-n h") 'hoogle)
     (define-key haskell-mode-map (kbd "C-c v c") 'haskell-cabal-visit-file)
     (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
     (define-key haskell-mode-map (kbd "M-t") 'transpose-words)
