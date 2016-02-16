@@ -100,7 +100,7 @@
   (when (yes-or-no-p (format "Really delete '%s'?"
                              (file-name-nondirectory buffer-file-name)))
       (delete-file (buffer-file-name))
-      (kill-this-buffer)))
+      (kill-buffer (current-buffer))))
 
 (defun my-goto-scratch-buffer ()
   "Create a new scratch buffer."
@@ -245,6 +245,7 @@ locate PACKAGE."
 (key-chord-define-global "yy" 'browse-kill-ring)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-c m") 'mail)
+(global-set-key (kbd "C-c 4 m") 'mail-other-window)
 
 (require-package 'flycheck)
 (require 'flycheck)
@@ -260,18 +261,19 @@ locate PACKAGE."
 (setq avy-all-windows 'all-frames)
 (setq avy-background t)
 
-;; key chords are nice
+;; Key chords are nice to have!
 (key-chord-define-global "jc" 'avy-goto-char-in-line)
 (key-chord-define-global "jj" 'avy-goto-char)
 (key-chord-define-global "jk" 'avy-goto-word-or-subword-1)
-(key-chord-define-global "jl" 'avy-goto-line)
 (key-chord-define-global ",." (lambda () (interactive) (insert "$")))
+(key-chord-define-global ";," (lambda () (interactive) (insert "~")))
 
 (global-set-key (kbd "C-c a c") 'avy-copy-line)
 (global-set-key (kbd "C-C a p") 'avy-pop-mark)
 (global-set-key (kbd "C-c a m") 'avy-move-line)
 (global-set-key (kbd "C-c a r") 'avy-copy-region)
 (global-set-key (kbd "C-c a s") 'avy-isearch)
+(global-set-key (kbd "M-g g") 'avy-goto-line)
 
 ;; Modify this code to perform avy-save-kill-region... That would be sweet!
 ;; (defun avy-copy-region ()
@@ -291,7 +293,7 @@ locate PACKAGE."
 ;;             (line-end-position)))
 ;;          pad)))))
 
-(key-chord-define-global "xk" 'eod-kill-buffer)
+;; (key-chord-define-global "xk" 'nil)
 
 (defun eod-kill-buffer ()
   "Kill the current buffer."
@@ -308,6 +310,16 @@ locate PACKAGE."
            (eq major-mode 'dired-mode))
       (insert (file-name-directory filename)))))
 
+(defun eod-view-buffer-directory ()
+  "View the directory of the current bufer (FILENAME)"
+  (interactive)
+  (let ((filename (buffer-file-name)))
+    (when (and
+           (not (file-directory-p filename))
+           (file-exists-p filename)
+           (eq major-mode 'dired-mode))
+      (message (file-name-directory filename)))))
+
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'org-mode-hook #'rainbow-delimiters-mode)
@@ -317,8 +329,8 @@ locate PACKAGE."
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
     (add-hook hook 'turn-on-elisp-slime-nav-mode))
 
-;;; set the time to show partially completed keystrokes to a tenth of a second.
-(setq echo-keystrokes 0.1)
+;;; set the time to show partially completed keystrokes to a four tenths of a second.
+(setq echo-keystrokes 0.4)
 
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 
@@ -362,6 +374,9 @@ With a prefix arg, INSERT it into the buffer."
   (funcall (if insert 'insert 'message)
            (format-time-string "%a, %d, %b, %Y, %T, %Z" (current-time))))
 
+
+(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
+
 (global-set-key (kbd "M-%") 'anzu-query-replace-regexp)
 (global-set-key (kbd "C-M-%") 'anzu-query-replace)
 (setq anzu-lighter "")
@@ -382,7 +397,6 @@ With a prefix arg, INSERT it into the buffer."
 (defun open-as-root ()
   "Open a file as root."
   (find-file (concat "/sudo:root@localhost:" filename)))
-
 
 (defun open-buffer-as-root ()
   (interactive)
@@ -416,6 +430,9 @@ With a prefix arg, INSERT it into the buffer."
 
 ;;; set up smartparens for config files
 (add-hook 'conf-space-mode-hook 'turn-on-smartparens-mode)
-(remove-hook 'conf-space-mode-hook #'disable-paredit-mode)
+(remove-hook 'conf-space-mode-hook #'disable-paredit-mode) ; this may be incorrect
+
+(beacon-mode 1)
+
 (provide 'setup-convenience)
 ;;; setup-convenience.el ends here

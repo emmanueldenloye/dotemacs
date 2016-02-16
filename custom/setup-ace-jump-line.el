@@ -1,12 +1,8 @@
-;;; package -- Commentary
+;;; package --
 ;;; Commentary:
 ;;; Code:
 
 (require 'ace-jump-helm-line)
-
-;; (use-package ace-jump-helm-line
-;;   :config
-;;   (setq ace-jump-helm-line-use-avy-style t))
 
 (eval-after-load "helm"
   (progn

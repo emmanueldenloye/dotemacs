@@ -29,6 +29,9 @@
 (setq ghc-display-error 'minibuffer)
 ;; ;; (add-hook 'haskell-mode-hook (lambda () (ghc-init) (hare-init)) ; For HaRe refactoring.
 
+
+(add-hook 'haskell-mode-hook 'turn-on-haskell-decl-scan)
+
 (require 'company)
 (add-hook 'haskell-mode-hook 'company-mode)
 
@@ -73,11 +76,28 @@
   (when (eq major-mode 'haskell-mode)
     (insert "undefined")))
 
+(defun eod-haskell-insert-doc ()
+  "Insert the documentation syntax."
+  (interactive)
+  (when (eq major-mode 'haskell-mode)
+    (insert "-- | ")))
+
 (defun haskell-sp-splice-sexp (&optional arg)
   "Requisite documentation ARG!"
   (interactive "p")
   (sp-splice-sexp arg)
   (haskell-indentation-indent-backwards))
+
+(defun haskell-simple-run ()
+  "Run the current haskell file with the program \"runhaskell\"."
+  (interactive)
+  (let ((filename (buffer-file-name)))
+    (when (eq major-mode 'haskell-mode)
+      (async-shell-command
+       (concat "runhaskell "
+               filename)))))
+
+;; (eval-after-load 'flycheck '(require 'flycheck-hdevtools))
 
 (eval-after-load 'haskell-mode
   '(progn
@@ -92,6 +112,7 @@
     (define-key haskell-mode-map (kbd "C-c .") 'haskell-indent-align-guards-and-rhs)
     (define-key haskell-mode-map (kbd "C-c TAB") 'ghc-insert-template-or-signature)
     (define-key haskell-mode-map (kbd "C-c C-u") 'eod-haskell-mode-insert-undefined-at-point)
+    (define-key haskell-mode-map (kbd "C-c i d") 'eod-haskell-insert-doc)
     (define-key haskell-mode-map (kbd "M-s") 'haskell-sp-splice-sexp)
     (define-key haskell-mode-map (kbd "M-(") 'haskell-wrap-with-paren-pair-and-fix-indent)
     (define-key haskell-mode-map (kbd "M-g M-p") 'ghc-goto-prev-error)
@@ -99,10 +120,10 @@
     (define-key haskell-mode-map (kbd "M-g h M-p") 'ghc-goto-prev-hole)
     (define-key haskell-mode-map (kbd "M-g h M-n") 'ghc-goto-next-hole)
     (define-key haskell-mode-map [f8] 'haskell-navigate-imports)
+    (define-key haskell-mode-map [f12] 'haskell-simple-run)
     (define-key haskell-mode-map (kbd "C-c C-n h") 'hoogle)
     (define-key haskell-mode-map (kbd "C-c v c") 'haskell-cabal-visit-file)
     (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
-    (define-key haskell-mode-map (kbd "M-t") 'transpose-words)
     (define-key shm-map (kbd "C-c C-s") 'shm/case-split)))
 
 (eval-after-load 'haskell-cabal

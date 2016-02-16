@@ -1,21 +1,47 @@
 ;;; -*- coding: utf-8 -*-
 (("/home/emmanuel/.emacs.d/eshell/alias" . 195)
+ ("/home/emmanuel/.xmonad/xmonad.hs" . 4264)
+ ("/home/emmanuel/Dropbox/haskell/"
+  (dired-filename . "/home/emmanuel/Dropbox/haskell/freedman"))
+ ("/home/emmanuel/Dropbox/haskell/freedman/"
+  (dired-filename . "/home/emmanuel/Dropbox/haskell/freedman/Combinations.hs"))
+ ("/home/emmanuel/"
+  (dired-filename . "/home/emmanuel/Dropbox"))
+ ("/home/emmanuel/Dropbox/"
+  (dired-filename . "/home/emmanuel/Dropbox/haskell"))
+ ("/home/emmanuel/.emacs.d/custom/"
+  (dired-filename . "/home/emmanuel/.emacs.d/custom/setup-haskell.el"))
+ ("/home/emmanuel/.emacs.d/custom/setup-convenience.el" . 10862)
+ ("/home/emmanuel/.emacs.d/custom/setup-haskell.el" . 3183)
+ ("/home/emmanuel/.emacs.d/custom/setup-eod-defuns.el" . 1122)
+ ("/home/emmanuel/combtetst/"
+  (dired-filename . "/home/emmanuel/combtetst/Combinations.hs"))
+ ("/home/emmanuel/combtetst/main.hs" . 145)
+ ("/home/emmanuel/combtetst/Combinations.hs" . 302)
+ ("/home/emmanuel/.emacs.d/custom/setup-editing.el" . 5742)
+ ("/home/emmanuel/.emacs.d/custom.el" . 2339)
+ ("/home/emmanuel/.emacs.d/custom/setup-conf.el" . 155)
+ ("/home/emmanuel/.pentadactylrc" . 359)
+ ("/home/emmanuel/Dropbox/haskell/random/testingGraph/src/TestGraph.hs" . 348)
+ ("/home/emmanuel/.emacs.d/custom/setup-application.el" . 30)
+ ("/home/emmanuel/Documents/Code_Repository/haskell/subhask-test/"
+  (dired-filename . "/home/emmanuel/Documents/Code_Repository/haskell/subhask-test/.cabal-sandbox"))
+ ("/home/emmanuel/Downloads/nukes-list.csv" . 1933)
+ ("/home/emmanuel/Dropbox/haskell/random/testingGraph/src/UtilGraph.hs" . 1492)
+ ("/home/emmanuel/Dropbox/haskell/random/testingGraph/testingGraph.cabal" . 823)
+ ("/home/emmanuel/Dropbox/haskell/random/testingGraph/src/UtilGraphMap.hs" . 758)
+ ("/home/emmanuel/Dropbox/haskell/brun_fast_git/Main.hs" . 2316)
+ ("/home/emmanuel/Dropbox/haskell/brun_fast_git/manifoldRNC.cabal" . 1193)
+ ("/home/emmanuel/Dropbox/haskell/random/memoization.hs" . 617)
  ("/home/emmanuel/.emacs.d/custom/setup-ace-jump-line.el" . 351)
  ("/home/emmanuel/.cabal/packages/hackage.haskell.org/ghc-mod/5.4.0.0/ghc-mod-5.4.0.0.tar.gz" . 211)
- ("/home/emmanuel/.emacs.d/custom/"
-  (dired-filename . "/home/emmanuel/.emacs.d/custom/setup-helm-bibtex.el"))
- ("/home/emmanuel/.emacs.d/custom/setup-convenience.el" . 13519)
- ("/home/emmanuel/.emacs.d/"
-  (dired-filename . "/home/emmanuel/.emacs.d/.git"))
  ("/home/emmanuel/.emacs.d/custom/setup-text.el" . 103)
  ("/home/emmanuel/.emacs.d/custom/setup-programming.el" . 2366)
  ("/home/emmanuel/.emacs.d/custom/setup-faces-and-ui.el" . 3343)
- ("/home/emmanuel/.emacs.d/custom/setup-editing.el" . 971)
  ("/home/emmanuel/.emacs.d/custom/setup-org-present.el" . 736)
  ("/home/emmanuel/.emacs.d/custom/setup-org.el" . 2182)
  ("/home/emmanuel/.emacs.d/custom/setup-local.el" . 52)
  ("/home/emmanuel/.emacs.d/custom/setup-helm.el" . 3111)
- ("/home/emmanuel/.emacs.d/custom/setup-haskell.el" . 4175)
  ("/home/emmanuel/.emacs.d/custom/setup-guide-key.el" . 330)
  ("/home/emmanuel/.emacs.d/custom/setup-god-mode.el" . 1439)
  ("/home/emmanuel/.emacs.d/custom/setup-flyspell.el" . 52)
@@ -23,11 +49,9 @@
  ("/home/emmanuel/.emacs.d/custom/setup-environment.el" . 2049)
  ("/home/emmanuel/.emacs.d/custom/setup-development.el" . 277)
  ("/home/emmanuel/.emacs.d/custom/setup-data.el" . 51)
- ("/home/emmanuel/.emacs.d/custom.el" . 1369)
  ("/home/emmanuel/.xsession" . 2036)
  ("/home/emmanuel/.i3/config" . 6606)
  ("/home/emmanuel/.xinitrc" . 1218)
- ("/home/emmanuel/.pentadactylrc" . 589)
  ("/home/emmanuel/Documents/"
   (dired-filename . "/home/emmanuel/Documents/toReadLater"))
  ("/home/emmanuel/.emacs.d/custom/setup-evil-mode.el" . 1968)

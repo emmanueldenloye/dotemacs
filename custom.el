@@ -17,6 +17,9 @@
  '(custom-safe-themes
    (quote
     ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
+ '(erc-keywords
+   (quote
+    ("(\"emmanuel_erc *[,:;]\" \"\\\\bemmanuel[!?.]+$\" \"hey emmanuel\")")))
  '(evil-jumper-mode t)
  '(evil-want-C-u-scroll t)
  '(fci-rule-color "#eee8d5")
@@ -25,6 +28,7 @@
  '(global-evil-visualstar-mode t)
  '(global-prettify-symbols-mode nil)
  '(haskell-complete-module-preferred nil)
+ '(haskell-indent-thenelse 2)
  '(haskell-interactive-popup-errors nil)
  '(haskell-process-arg-cabal-repl nil)
  '(haskell-process-auto-import-loaded-modules t)
@@ -35,8 +39,10 @@
  '(haskell-process-type (quote cabal-repl))
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
+ '(hindent-style "gibiansky")
  '(save-place t nil (saveplace))
  '(send-mail-function (quote smtpmail-send-it))
+ '(set-mark-command-repeat-pop t)
  '(shm-indent-point-after-adding-where-clause t)
  '(shm-lambda-indent-style 0)
  '(vc-annotate-background nil)
@@ -67,7 +73,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :foundry "unknown" :family "Inconsolata"))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "unknown" :family "Source Code Pro"))))
+ '(cursor ((t (:background "#Ff69b4"))))
  '(shm-current-face ((t (:background "#eee8d5"))))
  '(shm-quarantine-face ((t (:background "
 lemon chiffon")))))

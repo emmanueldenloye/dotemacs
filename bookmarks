@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("manifoldRML"
+(("setup-haskell.el"
+ (filename . "~/.emacs.d/custom/setup-haskell.el")
+ (front-context-string . "(lambda ()\n     ")
+ (rear-context-string . "skell-mode-hook ")
+ (position . 6140))
+("manifoldRML"
  (filename . "~/Dropbox/haskell/manifoldRML/")
  (front-context-string . "dist\n  drwxrwxr-")
  (rear-context-string . "0K Nov 12 22:58 ")

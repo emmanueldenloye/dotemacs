@@ -166,7 +166,7 @@ point reaches the beginning or end of the buffer, stop there."
        'paredit-barf-all-the-way-forward)
      (define-key paredit-mode-map (kbd "C-M-{")
        'paredit-barf-all-the-way-backward)
-     (define-key paredit-mode-map (kbd "C-M-m")
+     (define-key paredit-mode-map (kbd "C-c DEL")
        'paredit-delete-region)))
 
 (require 'undo-tree)
@@ -198,7 +198,7 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key (kbd "C-c C-y") 'x-clipboard-yank)
 
 ;;; Cursor color -> Saddle Brown
-(set-cursor-color "#8b4513")
+(set-cursor-color "#Ff69b4")
 
 (provide 'setup-editing)
 ;;; setup-editing.el ends here
