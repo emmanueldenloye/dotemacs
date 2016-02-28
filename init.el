@@ -2,6 +2,13 @@
 ;;; Commentary:
 ;;; Code:
 
+(add-to-list
+ 'load-path
+ "/home/emmanuel/.emacs.d/my-git-packages/benchmark-init-el/")
+
+(require 'benchmark-init-loaddefs)
+(benchmark-init/activate)
+
 (require 'package)
 (setq package-archives
       '(("melpa-stable" . "https://stable.melpa.org/packages/")
@@ -16,6 +23,10 @@
 
 (eval-when-compile
   (require 'cl))
+(eval-when-compile
+  (require 'use-package))
+(require 'diminish)
+(require 'bind-key)
 
 ;;; Load and execute the code every .el file in the custom sub directory.
 ;;; Also load the custom.el file.
