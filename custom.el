@@ -40,7 +40,7 @@
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
  '(hindent-style "gibiansky")
- 
+
  '(save-place t nil (saveplace))
  '(send-mail-function (quote smtpmail-send-it))
  '(set-mark-command-repeat-pop t)
@@ -79,4 +79,3 @@
  '(shm-current-face ((t (:background "#eee8d5"))))
  '(shm-quarantine-face ((t (:background "
 lemon chiffon")))))
-

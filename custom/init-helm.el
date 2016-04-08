@@ -16,6 +16,7 @@
              ("C-i" . helm-execute-persistent-action)
              ("C-z" . helm-select-action))
   (bind-key "C-c C-l" 'helm-minibuffer-history minibuffer-local-map)
+  (bind-key "C-x b" 'helm-mini)
   (add-hook
    'eshell-mode-hook
    #'(lambda ()

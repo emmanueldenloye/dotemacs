@@ -110,7 +110,7 @@
 (defun mplayer ()
   "An interface to mplayer."
   (interactive)
-  (shell-command (concat "xterm -e mplayer "
+  (shell-command (concat "gnome-term -e mplayer "
                          (shell-quote-argument
                           (expand-file-name
                            (read-file-name "Filename: ")))
@@ -143,7 +143,6 @@ With a prefix arg, INSERT it into the buffer."
   (let ((value (eval (preceding-sexp))))
     (backward-kill-sexp)
     (insert (format "%s" value))))
-
 
 (defun my-copy-file-name-to-clipboard ()
   "Copy the current buffer file name to the clipboard."
@@ -269,6 +268,90 @@ With a prefix arg, INSERT it into the buffer."
 
 (global-set-key (kbd "C-c C-.") 'toggle-window-split)
 
+(defun try-expand-flexible-abbrev (old)
+  "Try to complete word using flexible matching. Flexible matching works by
+taking the search string and then interspersing it with a regexp for any
+character. So, if you try to do a flexible match for `foo' it will match the
+word `findOtherOtter' but also `fixTheBoringOrange' and
+`ifthisisboringstopreadingnow'. The argument OLD has to be nil the first call
+of this function, and t for subsequent calls (for further possible completions
+of the same string). It returns t if a new completion is found, nil otherwise."
+  (if (not old)
+      (progn
+        (he-init-string (he-lisp-symbol-beg) (point))
+        (if (not (he-string-member he-search-string he-tried-table))
+            (setq he-tried-table (cons he-search-string he-tried-table)))
+        (setq he-expand-list
+              (and (not (equal he-search-string ""))
+                   (he-flexible-abbrev-collect he-search-string)))))
+  (while (and he-expand-list
+              (he-string-member (car he-expand-list) he-tried-table))
+    (setq he-expand-list (cdr he-expand-list)))
+  (if (null he-expand-list)
+      (progn
+        (if old (he-reset-string))
+        ())
+    (progn
+      (he-substitute-string (car he-expand-list))
+      (setq he-expand-list (cdr he-expand-list))
+      t)))
+
+(defun he-flexible-abbrev-collect (str)
+  "Find and collect all words that flex-matches STR.
+ See docstring for `try-expand-flexible-abbrev' for information about what
+flexible matching means in this context."
+  (let ((collection nil)
+        (regexp (he-flexible-abbrev-create-regexp str)))
+    (save-excursion
+      (goto-char (point-min))
+      (while (search-forward-regexp regexp nil t)
+        ;; Is there a better or quicker way than using
+        ;; `thing-at-point' here?
+        (setq collection (cons (thing-at-point 'word) collection))))
+    collection))
+
+(defun he-flexible-abbrev-create-regexp (str)
+  "Generate regexp for flexible matching of STR.
+See docstring for `try-expand-flexible-abbrev' for information
+about what flexible matching means in this context."
+  (concat "\\b" (mapconcat (lambda (x) (concat "\\w*" (list x))) str "")
+          "\\w*" "\\b"))
+
+(add-to-list 'hippie-expand-try-functions-list 'try-expand-flexible-abbrev)
+
+(defun eod-comment-or-uncomment-line (arg)
+  "Comment or uncomment the current line. This command's inner
+  operations do not pay attention to the current major mode, so be
+  mindful about parentheses getting clobbered in lisp modes."
+  (interactive "p")
+  (let (start end)
+    (save-excursion
+      (when (not (eq arg 0))
+        (if (< arg 0)
+            (progn
+              (end-of-line)
+              (setq end (point))
+              (forward-line arg)
+              (setq start (point)))
+          (progn
+            (beginning-of-line)
+            (setq start (point))
+            (forward-line arg)
+            (setq end (point))))
+        (comment-or-uncomment-region start end)))))
+
+(global-set-key (kbd "C-c C-;") 'eod-comment-or-uncomment-line)
+
+(defun eod-insert-dollar ()
+  "Insert a dollar into the buffer. If you are in an org or latex
+buffer, perform the desirable action."
+  (interactive)
+  (if (member major-mode
+              '(org-mode latex-mode))
+      (progn
+        (insert "$$")
+        (backward-char))
+    (insert "$")))
 
 (provide 'init-defuns)
 ;; init-defuns.el ends here

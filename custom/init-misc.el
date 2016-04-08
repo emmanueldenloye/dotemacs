@@ -9,7 +9,7 @@
 (global-set-key (kbd "C-x a r") 'align-regexp)
 
 ;; activate whitespace-mode to view all whitepsace characters
-(global-set-key (kbd "C-c w") 'whitespace-mode)
+(global-set-key (kbd "C-c C-w") 'whitespace-mode)
 
 (show-paren-mode 1)
 
@@ -109,7 +109,7 @@ point reaches the beginning or end of the buffer, stop there."
 (setq inhibit-startup-screen t)
 
 (setq savehist-additional-variables '(search ring regexp-search-ring) ; also save your regexp search queries
-      savehist-autosave-interval 60)	; save every minute
+      savehist-autosave-interval 60)    ; save every minute
 
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
@@ -141,24 +141,24 @@ point reaches the beginning or end of the buffer, stop there."
 (setq large-file-warning-threshold 100000000) ;; size in bytes
 
 (use-package whitespace
-	     :config
-	     (setq whitespace-style '(face empty tabs lines-tail trailing))
-	     (global-whitespace-mode nil))
+  :config
+  (setq whitespace-style '(face empty tabs lines-tail trailing))
+  (global-whitespace-mode nil))
 
 (setq user-mail-address "emmanuel.denloye@gmail.com"
       user-full-name "Emmanuel Denloye-Ito")
 
 (use-package info+
-	     :ensure t
-	     :config
-	     (global-unset-key (kbd "C-h h"))
-	     (define-key 'help-command (kbd "h m") 'discover-my-major))
+  :ensure t
+  :config
+  (global-unset-key (kbd "C-h h"))
+  (define-key 'help-command (kbd "h m") 'discover-my-major))
 
 (use-package help+
-	     :ensure t)
+  :ensure t)
 
 
-(setq c-default-style "linux"		;set style to linux
+(setq c-default-style "linux"    ;set style to linux
       c-basic-offset 4)
 
 (setq gdb-many-windows t
@@ -183,6 +183,19 @@ point reaches the beginning or end of the buffer, stop there."
 ;; (volatile-highlights-mode t)
 ;; (diminish 'volatile-highlights-mode)
 ;; (global-set-key (kbd "RET") 'newline-and-indent)
+
+(setq initial-scratch-message
+      (format
+       ";; %s\n\n"
+       (replace-regexp-in-string
+        "\n" "\n;; " ; comment each line
+        (replace-regexp-in-string
+         "\n$" "" ; remove trailing line break
+         (shell-command-to-string "fortune")))))
+
+;;; Place new lines in at the end of the buffer whenever next-line
+;;; (C-n) is executed.
+(setq next-line-add-newlines t)
 
 (provide 'init-misc)
 ;;; init-misc.el ends here
